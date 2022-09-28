@@ -1,0 +1,220 @@
+ 
+ /*全体*/
+
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: #fff;
+            }
+            .wrapper {
+                margin: 0;
+                padding: 0;
+                top: 90px;
+                width: 100%;
+                height: auto;
+                position: relative;
+                text-align: center;
+            }
+
+            /*ヘッダー*/
+            header#control1 {
+                width: 98%;
+                background-color: #DDFFFF;
+                text-align: center;
+                align-items: center;
+                position: fixed;
+                right: 1%;
+                left: 1%;
+                top: 5px;
+                height: 100px;
+                border-radius: 10px;
+                filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.4));
+                z-index:1;
+            }
+
+            div.homeclick {
+                font-size: 32px;
+                margin: 20px 0px;
+                font-family: 'yomogi', cursive;
+                color: black;
+            }
+
+            /*ボディー*/
+            main {
+                width: 100%;
+                position:auto;
+                
+            }
+
+            main ul {
+                padding:0px;
+                margin:0px;
+                font-size: 30px;
+                list-style: none;
+            }
+
+            main h2 {
+                padding:10px 0px;
+                margin:auto;
+                font-size: 30px;
+                list-style: none;
+                font-family: 'yomogi', cursive;
+                color: black;
+            }
+
+            main ul li {
+                text-decoration: none;
+                width: 80%;
+                margin: 10px auto;
+                 max-width: 500px;
+                padding: 0.5rem;
+              background: #DDFFFF;
+             border-left: solid 6px #00A4AC;
+              color: #00A4AC;
+             box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.22);
+            }
+
+            .slant-bg {
+                width: 100%;
+                padding: 150px 0;
+                clip-path: polygon(0 calc(0% + 7vw), 100% 0, 100% calc(100% - 7vw), 0 100%);
+                background-color: #DDFFFF;
+            }
+
+            .slant-bg p {
+                width: 65%;
+                margin: 0 auto;
+            }  
+            /*フッター*/
+            footer#control2 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 98%;
+                margin: 0;
+                background-color: #fff;
+                text-align: center;
+                position: fixed;
+                right: 1%;
+                left: 1%;
+                bottom: 5px;
+                border-radius: 5px;
+                filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.4));
+            }
+            
+            /*モーダル*/
+            #modal {
+                display: none;
+                text-align: center;
+                justify-content: center;
+                overflow: scroll;
+            }
+
+            .content {
+               
+                height: 30%;
+                width: 30%;
+            }
+            
+            .modal-link {
+                padding:0px;
+                margin:0px;
+                display: flex;
+                flex-wrap: wrap;
+                margin: auto ;
+                font-family: "Font awesome 5 Free";
+                font-weight: 900;
+                font-size: 40px;
+                list-style: none;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .modal-link li {
+                margin-bottom: 20px;
+            }
+
+            .modal-link li a {
+                display: block;
+                padding: 10px 30px;
+                text-decoration: none;
+                color: black;
+                position: relative;
+            }
+
+            .modal-link li a::after{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 10%;
+                width: 80%;
+                height: 2px;
+                background: black;
+                transition: all .3s;
+                transform: scale(0 ,1);
+                transform-origin: center top;
+            }
+
+            .modal-link li a:hover::after{
+                transform: scale(1, 1);
+            }
+            /*タブ*/
+            .tab {
+                content: '';
+                display: flex;
+                gap: 20px 5px;
+                flex-wrap: wrap;
+                list-style: none;
+            }
+
+            .tab li a {
+                padding: .5em 1em;
+                background: rgb(180, 180, 180);
+                border-radius: 10px 50px/50px 10px;
+                border:ridge 2px #333;
+                font-size: 16px;
+            }
+
+            .tab li.active a {
+                background: #fff;
+            }
+
+            .area {
+                display: none;
+                opacity: 0;
+                background: #fff;
+                padding: 50px 20px;
+            }
+
+            .area.is-active {
+                display: block;
+                animation-name: tabanime;
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
+            }
+
+            @keyframes tabanime {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+            /*pcのみ*/
+
+            div.pc-text {
+                display: none;
+            }
+            @media screen and (min-width: 768px) {
+                div.pc-text {
+                    display: block!important;
+                    font-size: 15px!important;
+                }
+                div.homeclick {
+                    font-size: 50px;
+                }
+                main {
+                    width: 100%;
+                }
+            }
