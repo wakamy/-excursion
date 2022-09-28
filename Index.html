@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.min.css">
+        <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap">
+        <style>
+            /*全体*/
+
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: #fff;
+            }
+            .wrapper {
+                margin: 0;
+                padding: 0;
+                top: 90px;
+                width: 100%;
+                height: auto;
+                position: relative;
+                text-align: center;
+            }
+
+            /*ヘッダー*/
+            header#control1 {
+                width: 98%;
+                background-color: #DDFFFF;
+                text-align: center;
+                align-items: center;
+                position: fixed;
+                right: 1%;
+                left: 1%;
+                top: 5px;
+                height: 100px;
+                border-radius: 10px;
+                filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.4));
+                z-index:1;
+            }
+
+            div.homeclick {
+                font-size: 32px;
+                margin: 20px 0px;
+                font-family: 'yomogi', cursive;
+                color: black;
+            }
+
+            /*ボディー*/
+            main {
+                width: 100%;
+                position:auto;
+                
+            }
+
+            main ul {
+                padding:0px;
+                margin:0px;
+                font-size: 30px;
+                list-style: none;
+            }
+
+            main h2 {
+                padding:10px 0px;
+                margin:auto;
+                font-size: 30px;
+                list-style: none;
+                font-family: 'yomogi', cursive;
+                color: black;
+            }
+
+            main ul li {
+                text-decoration: none;
+                width: 80%;
+                margin: 10px auto;
+                 max-width: 500px;
+                padding: 0.5rem;
+              background: #DDFFFF;
+             border-left: solid 6px #00A4AC;
+              color: #00A4AC;
+             box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.22);
+            }
+
+            .slant-bg {
+                width: 100%;
+                padding: 150px 0;
+                clip-path: polygon(0 calc(0% + 7vw), 100% 0, 100% calc(100% - 7vw), 0 100%);
+                background-color: #DDFFFF;
+            }
+
+            .slant-bg p {
+                width: 65%;
+                margin: 0 auto;
+            }  
+            /*フッター*/
+            footer#control2 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 98%;
+                margin: 0;
+                background-color: #fff;
+                text-align: center;
+                position: fixed;
+                right: 1%;
+                left: 1%;
+                bottom: 5px;
+                border-radius: 5px;
+                filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.4));
+            }
+            
+            /*モーダル*/
+            #modal {
+                display: none;
+                text-align: center;
+                justify-content: center;
+                overflow: scroll;
+            }
+
+            .content {
+               
+                height: 30%;
+                width: 30%;
+            }
+            
+            .modal-link {
+                padding:0px;
+                margin:0px;
+                display: flex;
+                flex-wrap: wrap;
+                margin: auto ;
+                font-family: "Font awesome 5 Free";
+                font-weight: 900;
+                font-size: 40px;
+                list-style: none;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .modal-link li {
+                margin-bottom: 20px;
+            }
+
+            .modal-link li a {
+                display: block;
+                padding: 10px 30px;
+                text-decoration: none;
+                color: black;
+                position: relative;
+            }
+
+            .modal-link li a::after{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 10%;
+                width: 80%;
+                height: 2px;
+                background: black;
+                transition: all .3s;
+                transform: scale(0 ,1);
+                transform-origin: center top;
+            }
+
+            .modal-link li a:hover::after{
+                transform: scale(1, 1);
+            }
+            /*タブ*/
+            .tab {
+                content: '';
+                display: flex;
+                gap: 20px 5px;
+                flex-wrap: wrap;
+                list-style: none;
+            }
+
+            .tab li a {
+                padding: .5em 1em;
+                background: rgb(180, 180, 180);
+                border-radius: 10px 50px/50px 10px;
+                border:ridge 2px #333;
+                font-size: 16px;
+            }
+
+            .tab li.active a {
+                background: #fff;
+            }
+
+            .area {
+                display: none;
+                opacity: 0;
+                background: #fff;
+                padding: 50px 20px;
+            }
+
+            .area.is-active {
+                display: block;
+                animation-name: tabanime;
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
+            }
+
+            @keyframes tabanime {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+            /*pcのみ*/
+
+            div.pc-text {
+                display: none;
+            }
+            @media screen and (min-width: 768px) {
+                div.pc-text {
+                    display: block!important;
+                    font-size: 15px!important;
+                }
+                div.homeclick {
+                    font-size: 50px;
+                }
+                main {
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <!--ヘッダー欄-->
+            <header id="control1">
+                <div class="homeclick">
+                    <a type="button"onclick="location.href='test.html'">2022年度校外学習サイト</a>
+                </div>
+            </header>
+
+            <!--メイン欄-->
+            <main>
+                <p>
+                    <h2>旅の目次</h2>
+                    <ul>
+                        <li>集合場所</li>
+                        <li>初めに</li>
+                        <li>注意事項</li>
+                        <li>持ち物</li>
+                        <li>地域マップ</li>
+                        <li>班名簿</li>
+                    </ul>
+                    <div class="slant-bg">
+                        <h2>脱出ゲーム</h2>
+                        <p>脱出ゲーム脱出ゲーム脱出ゲーム脱出ゲーム脱出ゲーム脱出ゲーム脱出ゲーム脱出ゲーム脱出ゲーム脱出ゲーム脱出ゲーム脱出ゲーム脱出ゲーム脱出ゲーム脱出ゲーム脱出ゲーム</p>
+                    </div>
+                    <div class="slant-bg">
+                        <h2>サンシャイン水族館</h2>
+                        <p>サンシャイン水族館サンシャイン水族館サンシャイン水族館サンシャイン水族館サンシャイン水族館サンシャイン水族館サンシャイン水族館サンシャイン水族館サンシャイン水族館</p>
+                    </div>
+                    <div class="slant-bg">
+                        <h2>フード</h2>
+                        <p>フードフードフードフードフードフードフードフードフードフードフードフードフードフードフードフードフードフードフードフードフードフードフードフードフードフードフード</p>
+                    </div>
+                    <div class="slant-bg">
+                        <h2>周辺スポット</h2>
+                        <p>周辺スポット周辺スポット周辺スポット周辺スポット周辺スポット周辺スポット周辺スポット周辺スポット周辺スポット周辺スポット周辺スポット周辺スポット周辺スポット</p>
+                    </div>
+
+                </p>
+                <div id="modal">
+                    <!--マップのページ-->
+                    <div id="modal-content-map" class="modal-content">
+                        <ul class="tab">
+                            <li><a href="#station">渋谷駅</a></li>
+                            <li><a href="#aquarium">水族館</a></li>
+                            <li><a href="#escape">脱出ゲーム</a></li>
+                        </ul>
+                        <!--渋谷駅のマップ-->
+                        <div id="station" class="area">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7701641507165!2d139.69944711509012!3d35.65803388019973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b563b00109f%3A0x337328def1e2ab26!2z5riL6LC36aeF!5e0!3m2!1sja!2sjp!4v1663251636639!5m2!1sja!2sjp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <!--サンシャイン水族館のマップ-->
+                        <div id="aquarium" class="area">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.889932826508!2d139.7179632506568!3d35.72892538008594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d6f41f03f85%3A0xe25bfe624782e3c9!2z44K144Oz44K344Oj44Kk44Oz5rC05peP6aSo!5e0!3m2!1sja!2sjp!4v1663310184198!5m2!1sja!2sjp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <!--リアル脱出ゲームのマップ-->
+                        <div id="escape" class="area">
+                            <p>どこのリアル脱出ゲームかわからん</p>
+                        </div>
+                    </div>
+                    <!--連絡先のページ-->
+                    <div id="modal-content-address" class="modal-content">
+                        <h2>連絡先</h2>
+                        <p>連絡先コンテンツ<br>0120-107-929</p>
+                    </div>
+                    <!--スケジュールのページ-->
+                    <div id="modal-content-schedule" class="modal-content">
+                        <h2>スケジュール</h2>
+                        <ul class="tab">
+                            <li><a href="#morning">午前班</a></li>
+                            <li><a href="#afternoon">午後班</a></li>
+                        </ul>
+                        <!--午前班-->
+                        <div id="morning" class="area">
+                            <p>午前班ページ</p>
+                        </div>
+                        <!--午後班-->
+                        <div id="afternoon" class="area">
+                            <p>午後班ページ</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!--フッター欄-->
+            <footer id="control2">
+
+                <ul class="modal-link">
+                    <li><a href="#modal-content-map" class="content">&#xf5a0</a></li><div class="pc-text">マップ</div>
+                    <li><a href="#modal-content-address" class="content">&#xf095</a></li><div class="pc-text">連絡先</div>
+                    <li><a href="#modal-content-schedule" class="content">&#xf017</a></li><div class="pc-text">スケジュール</div>
+                </ul>
+            </footer>
+        </div>
+
+        <!--jsのやつ-->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"></script>
+        <script>
+
+            $('.content').modaal();
+
+            $('')
+
+            //タブの設定
+            function GethashID (hashIDName){
+                if(hashIDName){
+                    $('.tab li').find('a').each(function(){
+                        var idName = $(this).attr('href');
+                        if(idName == hashIDName){
+                            var parentElm = $(this).parent();
+                            $('.tab li').removeClass("active");
+                            $(parentElm).addClass("active");
+
+                            $(".area").removeClass("is-active");
+                            $(hashIDName).addClass("is-active");
+                        }
+                    });
+                }
+            }
+
+            $('.tab a').on('click',function(){
+                var idName = $(this).attr('href');
+                GethashID(idName);
+                return false;
+            });
+            $(window).on('load',function(){
+                $('.tab li:first-of type').addClass("active");
+                $('.area:first-of-type').addClass("is-active");
+                var hashName = location.hash;
+                GethashID(hashName);
+            });
+
+
+            
+        </script>
+    </body>
+</html>
