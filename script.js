@@ -53,3 +53,4 @@ $('.title').on('click', function() {//タイトル要素をクリックしたら
       $(Box).slideDown(500);          //アコーディオンを開く
     });
   });
+  

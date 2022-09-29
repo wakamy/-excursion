@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.min.css">
+        <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap">
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+
+    <body>
+        <a class="pagetop" href="index.html"><div class="pagetop__arrow"></div></a>
+        <div class="wrapper">
+            <!--ヘッダー欄-->
+            <header id="control1">
+                <div class="homeclick">
+                    <a type="button"onclick="location.href='index.html'">2022年度校外学習サイト</a>
+                </div>
+            </header>
+
+            <!--メイン欄-->
+            <main>
+                <div class="content-wrapper2">
+                  
+                    <form name="highlight">
+                        <input type="text" id="word" placeholder="ページ内テキスト検索" /> <input type="button" onclick="doHighlight()" value="検索" /> <input type="reset" name="reset" id="reset" value="リセット"> 
+                        </form>
+                        <!-- ハイライトのターゲットとする範囲 - 開始 -->
+                        <div id="target">
+                        本文テキスト
+
+
+                        <table class="tbl-r02">
+                            <tr><th>1班</th>		<td>石島歩</td>	<td>青山琉惺</td>	<td>遠乗崚真</td>	<td>池野優真</td>	<td>今井俊介</td>	<td class=coltd>1班 脱出ゲーム</td>	<td>カジノ·ミステリ</td>	<td>15:00~16:00</td>	<td>別館　4F</td>	</tr>
+                            <tr><th>2班</th>		<td>井上ひろき</td>	<td>清水優良</td>	<td>中田悠仁</td>	<td>髙橋聖羽</td>	<td>斎田郁守</td>	<td class=coltd>2班 脱出ゲーム</td>	<td>チャーリー船長</td>	<td>10:00~11:00</td>	<td>別館　5F</td>	</tr>
+                            <tr><th>3班</th>		<td>鉄羅和佳</td>	<td>小柳円</td>	<td>本多智稀</td>	<td>原子諒太朗</td>	<td>古川直也</td>	<td class=coltd>3班 脱出ゲーム</td>	<td>復帰！魔法学校</td>	<td>14:00~15:00</td>	<td>別館　4F</td>	</tr>
+                            <tr><th>4班</th>		<td>三井明香</td>	<td>糸賀梨緒</td>	<td>槇田ジェシーりな</td>	<td>平子美優</td>	<td>土屋美羽</td>	<td class=coltd>4班 脱出ゲーム</td>	<td>バンパイア</td>	<td>14:00~15:00</td>	<td>別館　5F</td>	</tr>
+                            <tr><th>5班</th>		<td>寺岡恵空</td>	<td>岡野英智</td>	<td>石川玲音</td>	<td>草間祐空</td>	<td></td>	<td class=coltd>5班 脱出ゲーム</td>	<td>カジノ・ミステリ</td>	<td>11:00~12:00</td>	<td>別館　4F</td>	</tr>
+                            <tr><th>6班</th>		<td>岩見南穂</td>	<td>髙本穂乃果</td>	<td>高橋彩恵</td>	<td>加藤沙菜</td>	<td>伊藤沙菜</td>	<td class=coltd>6班 脱出ゲーム</td>	<td>チャーリー船長</td>	<td>15:00~16:00</td>	<td>別館　5F</td>	</tr>
+                            <tr><th>7班</th>		<td>堀内駿冶</td>	<td>早川哲哉</td>	<td>高橋聡慈</td>	<td>山口歩希</td>	<td></td>	<td class=coltd>7班 脱出ゲーム</td>	<td>タイムリープ</td>	<td>15:00~16:00</td>	<td>本館　5F</td>	</tr>
+                            <tr><th>8班</th>		<td>戎嶋理良</td>	<td>岡幸樹</td>	<td>河野生絆</td>	<td>新澤拓海</td>	<td>福島佑斗</td>	<td class=coltd>8班 脱出ゲーム</td>	<td>賞金首の海賊</td>	<td>13:00~14:00</td>	<td>本館　5F</td>	</tr>
+                            <tr><th>9班</th>		<td>関根惇</td>	<td>佐藤龍青</td>	<td>春山昇太郎</td>	<td>高野翼</td>	<td>本村昂太</td>	<td class=coltd>9班 脱出ゲーム</td>	<td>恐竜·計画</td>	<td>13:00~14:00</td>	<td>別館　5F</td>	</tr>
+                            <tr><th>10班</th>		<td>海藤璃帆</td>	<td>辻百希</td>	<td>児玉瑞希</td>	<td>斉藤朱音</td>	<td></td>	<td class=coltd>10班 脱出ゲーム</td>	<td>プリズン</td>	<td>15:00~16:00</td>	<td>本館　5F</td>	</tr>
+                            <tr><th>11班</th>		<td>江口慧</td>	<td>山崎翔</td>	<td>天野響</td>	<td>我妻永遠</td>	<td>滝澤甲</td>	<td class=coltd>11班 脱出ゲーム</td>	<td>恐竜·計画</td>	<td>14:00~15:00</td>	<td>別館　5F</td>	</tr>
+                            <tr><th>12班</th>		<td>中原海斗</td>	<td>石坂風磨</td>	<td>坂本威瑠</td>	<td>長澤翔太</td>	<td>岩波伶威</td>	<td class=coltd>12班 脱出ゲーム</td>	<td>賞金首の海賊</td>	<td>15:00~16:00</td>	<td>本館　5F</td>	</tr>
+                            <tr><th>13班</th>		<td>小林篤紘</td>	<td>長谷川侑吾</td>	<td>石坂啓太郎</td>	<td>盧泰心</td>	<td></td>	<td class=coltd>13班 脱出ゲーム</td>	<td>恐竜·計画</td>	<td>15:00~16:00</td>	<td>別館　5F</td>	</tr>
+                            <tr><th>14班</th>		<td>本橋玄基</td>	<td>寺岡拓哉</td>	<td>町田知暉</td>	<td>内藤颯亮</td>	<td>栗島直希</td>	<td class=coltd>14班 脱出ゲーム</td>	<td>カジノ·ミステリ</td>	<td>13:00~14:00</td>	<td>別館　4F</td>	</tr>
+                            <tr><th>15班</th>		<td>澤田知佳</td>	<td>星野ひまり</td>	<td>岡野日奈</td>	<td>飯塚愛莉</td>	<td></td>	<td class=coltd>15班 脱出ゲーム</td>	<td>復帰！魔法学校</td>	<td>15:00~16:00</td>	<td>別館　4F</td>	</tr>
+                            <tr><th>16班</th>		<td>関戸星来</td>	<td>池田絢香</td>	<td>楊孜</td>	<td>御守優月</td>	<td></td>	<td class=coltd>16班 脱出ゲーム</td>	<td>タイムリープ</td>	<td>13:00~14:00</td>	<td>本館　5F</td>	</tr>
+                            <tr><th>17班</th>		<td>水田聖海 </td>	<td>中川優翔 </td>	<td>福島未来 </td>	<td>千賀倖成 </td>	<td>林優樹</td>	<td class=coltd>17班 脱出ゲーム</td>	<td>プリズン</td>	<td>14:00~15:00</td>	<td>本館　5F</td>	</tr>
+                            <tr><th>18班</th>		<td>住𠮷優楽</td>	<td>奧澤華奈</td>	<td>青井玲花</td>	<td> 林凛奈</td>	<td></td>	<td class=coltd>18班 脱出ゲーム</td>	<td>バンパイア</td>	<td>13:00~14:00</td>	<td>別館　5F</td>	</tr>
+                            <tr><th>19班</th>		<td>倉持貴太</td>	<td>酒井亮太朗</td>	<td>濱田彪河</td>	<td>河合泰我</td>	<td>沼尾草介</td>	<td class=coltd>19班 脱出ゲーム</td>	<td>プリズン</td>	<td>13:00~14:00</td>	<td>本館　5F</td>	</tr>
+                            <tr><th>25班</th>		<td>和久幸南</td>	<td>𠮷池健志</td>	<td>星井海斗</td>	<td>堀本怜央</td>	<td>飛田隼杜</td>	<td class=coltd>25班 脱出ゲーム</td>	<td>チャーリー船長</td>	<td>12:00~13:00</td>	<td>別館　5F</td>	</tr>
+                            <tr><th>26班</th>		<td>千原琉聖</td>	<td>星野颯太</td>	<td>曽山唯翔</td>	<td>吉原永遠</td>	<td>新保凱己</td>	<td class=coltd>26班 脱出ゲーム</td>	<td>賞金首の海賊</td>	<td>11:00~12:00</td>	<td>本館　5F</td>	</tr>
+                            <tr><th>27班</th>		<td>石山百花</td>	<td>若宮佑真</td>	<td>今井明</td>	<td>横田大地</td>	<td>山田百花</td>	<td class=coltd>27班 脱出ゲーム</td>	<td>カジノ·ミステリ</td>	<td>10:00~11:00</td>	<td>別館　4F</td>	</tr>
+                            <tr><th>28班</th>		<td>森山光色</td>	<td>横田恵依</td>	<td>皆川結</td>	<td>後藤愛結</td>	<td>菅原華純</td>	<td class=coltd>28班 脱出ゲーム</td>	<td>カジノ·ミステリ</td>	<td>12:00~13:00</td>	<td>別館　4F</td>	</tr>
+                            <tr><th>29班</th>		<td>原田蓮央</td>	<td>鳥越花音</td>	<td>山田奈波</td>	<td>水馬優奈</td>	<td>黒澤 翔洸</td>	<td class=coltd>29班 脱出ゲーム</td>	<td>恐竜・計画</td>	<td>12:00~13:00</td>	<td>別館　5F</td>	</tr>
+                            <tr><th>30班</th>		<td>小山優哉</td>	<td>田中昭英</td>	<td>渋沢蓮</td>	<td>宝田煌太</td>	<td></td>	<td class=coltd>30班 脱出ゲーム</td>	<td>復帰！魔法学校</td>	<td>10:00~11:00</td>	<td>別館　4F</td>	</tr>
+                            <tr><th>31班</th>		<td>廣井星我</td>	<td>安田正輝</td>	<td>川下透和</td>	<td>関愛桃瑠</td>	<td>名古谷陽和</td>	<td class=coltd>31班 脱出ゲーム</td>	<td>タイムリープ</td>	<td>10:00~11:00</td>	<td>本館　5F</td>	</tr>
+                            <tr><th>32班</th>		<td>田子智紘</td>	<td>佐藤虎太郎</td>	<td>堀内紀子</td>	<td>根本真依</td>	<td>佐藤瑠泉</td>	<td class=coltd>32班 脱出ゲーム</td>	<td>復帰！魔法学校</td>	<td>12:00~13:00</td>	<td>別館　4F</td>	</tr>
+                            <tr><th>33班</th>		<td>小池那由多</td>	<td>橘和泉</td>	<td>満木龍希</td>	<td>立垣心愛</td>	<td>若林大樹</td>	<td class=coltd>33班 脱出ゲーム</td>	<td>バンパイア</td>	<td>12:00~13:00</td>	<td>別館　5F</td>	</tr>
+                            <tr><th>34班</th>		<td>木藤花奈</td>	<td>越阪部愛実</td>	<td>竹花ひなほ</td>	<td>廣田曖</td>	<td>梅邑こころ</td>	<td class=coltd>34班 脱出ゲーム</td>	<td>クロバラ</td>	<td>10:00~11:00</td>	<td>本館4F</td>	</tr>
+                            <tr><th>35班</th>		<td>冨士雪乃</td>	<td>岡村京花</td>	<td>宍戸千華</td>	<td>鈴木汐織</td>	<td></td>	<td class=coltd>35班 脱出ゲーム</td>	<td>タイムリープ</td>	<td>12:00~13:00</td>	<td>本館　5F</td>	</tr>
+                            <tr><th>36班</th>		<td>佐藤亜美</td>	<td>渡辺千晴</td>	<td>山口益澄</td>	<td>相沢桜良</td>	<td>本多由梨亜</td>	<td class=coltd>36班 脱出ゲーム</td>	<td>賞金首の海賊</td>	<td>12:00~13:00</td>	<td>本館　5F</td>	</tr>
+                            <tr><th>37班</th>		<td>萩原七海</td>	<td>山本美登</td>	<td>江原小春</td>	<td>井草瑠華</td>	<td></td>	<td class=coltd>37班 脱出ゲーム</td>	<td>チャーリー船長</td>	<td>11:00~12:00</td>	<td>別館　5F</td>	</tr>
+                            <tr><th>38班</th>		<td>宮崎詩帆</td>	<td>石井心菜</td>	<td>五十嵐咲空</td>	<td>川島花音</td>	<td></td>	<td class=coltd>38班 脱出ゲーム</td>	<td>賞金首の海賊</td>	<td>10:00~11:00</td>	<td>本館　5F</td>	</tr>
+                            <tr><th>39班</th>		<td>金巻菫</td>	<td>三橋愛子</td>	<td>和氣聡太</td>	<td>藤原咲</td>	<td>佐藤すみれ</td>	<td class=coltd>39班 脱出ゲーム</td>	<td>バンパイア</td>	<td>10:00~11:00</td>	<td>別館　5F</td>	</tr>
+                            <tr><th>40班</th>		<td>笹谷涼音</td>	<td>成田晴美</td>	<td>古波鮫美空</td>	<td>土田渚</td>	<td>谷口ゆきの</td>	<td class=coltd>40班 脱出ゲーム</td>	<td>恐竜·計画</td>	<td>10:00~11:00</td>	<td>別館　5F</td>	</tr>
+                            <tr><th>41班</th>		<td>山王堂匠</td>	<td>馬場悠矢</td>	<td>遠藤史惟</td>	<td>比護歩</td>	<td></td>	<td class=coltd>41班 脱出ゲーム</td>	<td>バンパイア</td>	<td>11:00~12:00</td>	<td>別館　5F</td>	</tr>
+                            <tr><th>42班</th>		<td>大目詩萌</td>	<td>曵地風花</td>	<td>乙坂優美菜</td>	<td>浅野順穂</td>	<td></td>	<td class=coltd>42班 脱出ゲーム</td>	<td>復帰！魔法学校</td>	<td>11:00~12:00</td>	<td>別館　4F</td>	</tr>
+                            <tr><th>43班</th>		<td>鈴木直人</td>	<td>鈴木尚磨</td>	<td>上杉陸智</td>	<td>鳥井瞭太郎</td>	<td></td>	<td class=coltd>43班 脱出ゲーム</td>	<td>タイムリープ</td>	<td>11:00~12:00</td>	<td>本館　5F</td>	</tr>
+                            <tr><th>44班</th>		<td>髙橋七海</td>	<td>髙橋柚花</td>	<td>中嶋深智</td>	<td>法地姫徠</td>	<td></td>	<td class=coltd>44班 脱出ゲーム</td>	<td>恐竜·計画</td>	<td>11:00~12:00</td>	<td>別館　5F</td>	</tr>
+                            <tr><th>45班</th>		<td>網倉由騎</td>	<td>野田竜之介</td>	<td>内田梗</td>	<td>菅原柚</td>	<td></td>	<td class=coltd>45班 脱出ゲーム</td>	<td>賞金首の海賊</td>	<td>12:00~13:00</td>	<td>本館　5F</td>	</tr>
+                            <tr class="last">
+                          </table>
+                        </div>
+                        <!-- ハイライトのターゲットとする範囲 - 終了 -->
+
+                </div>
+                <div id="modal">
+                    <!--マップのページ-->
+                    <div id="modal-content-map" class="modal-content">
+                        <section>
+                            <h2 class="title">マップ一覧</h2>
+                            <div class="box">
+                                <ul class="tab">
+                                    <li><a href="#station">集合場所</a></li>
+                                    <li><a href="#aquarium">サンシャイン水族館</a></li>
+                                    <li><a href="#escape">リアル脱出ゲーム本館</a></li>
+                                    <li><a href="#escape2">リアル脱出ゲーム別館</a></li>
+                                </ul>
+                            </div>
+                          </section>
+                        <!--渋谷駅のマップ-->
+                        <div id="station" class="area">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2166.7376887446494!2d139.7132239698836!3d35.727542410843334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d68f6cfe057%3A0xddd17dcd7ecaf745!2z6LGK5bO25Yy656uL5Y2X5rGg6KKL5YWs5ZyS!5e0!3m2!1sja!2sjp!4v1664461187324!5m2!1sja!2sjp" width="100%" height="580" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <!--サンシャイン水族館のマップ-->
+                        <div id="aquarium" class="area">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.8897557410955!2d139.71796861528858!3d35.72892973496187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d6f41f03f85%3A0xe25bfe624782e3c9!2z44K144Oz44K344Oj44Kk44Oz5rC05peP6aSo!5e0!3m2!1sja!2sjp!4v1664461542861!5m2!1sja!2sjp" width="100%" height="580" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <!--リアル脱出ゲームのマップ-->
+                        <div id="escape" class="area">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1772.2337538411816!2d139.7114215503049!3d35.7250914686104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d698263ffff%3A0xbd59a81d7022de2d!2z57W25a--56m66ZaT44Oq44Ki44Or5a-G5a6k6ISx5Ye644Ky44O844Og!5e0!3m2!1sja!2sjp!4v1664461599626!5m2!1sja!2sjp" width="100%" height="580" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <!--リアル脱出ゲーム別館のマップ-->
+                        <div id="escape2" class="area">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d202.43771327816563!2d139.7153208!3d35.7261346!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d6969f11195%3A0x310ce03bbe367524!2z44CSMTcxLTAwMjIg5p2x5Lqs6YO96LGK5bO25Yy65Y2X5rGg6KKL77yS5LiB55uu77yT77yT4oiS77yWIOWkp-WQjOODk-ODqw!5e0!3m2!1sja!2sjp!4v1664463071880!5m2!1sja!2sjp" width="100%" height="580" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <!--連絡先のページ-->
+                    <div id="modal-content-address" class="modal-content">
+                        <h2>緊急連絡方法</h2>
+                        <p>当日Slackで立てられるスレッドの方にご連絡ください</p>
+                        <h2>非常時の連絡先</h2>
+                        <p>緊急で電話が必要な場合は下記の番号にご連絡ください。<br><a href="tel:07010475000">070-1047-5000</a></p>
+                    </div>
+                    <!--スケジュールのページ-->
+                    <div id="modal-content-schedule" class="modal-content">
+                        <h2>スケジュール</h2>
+                        <ul class="tab">
+                            <li><a href="#morning">午前班</a></li>
+                            <li><a href="#afternoon">午後班</a></li>
+                        </ul>
+                        <!--午前班-->
+                        <div id="morning" class="area">
+
+                            <table class="tbl-r02">
+                                <tr>
+                                  <th>集合時間(池袋公園)</th>
+                                  <td>9:20〜9:40 (開始前)</td>
+                                  <td>16:00〜16:20 (解散前)</td>
+                                </tr>
+                                <tr>
+                                  <th>脱出ゲーム</th>
+                                  <td>10:00〜11:00</td>
+                                  <td>11:00〜12:00</td>
+                                  <td>12:00〜13:00</td>
+                                </tr>
+                                  <th>サンシャイン水族館</th>
+                                  <td>14:00〜16:00</td>
+                                </tr>
+                                <tr class="last">
+                              </table>
+                               
+                            
+                        </div>
+                        <!--午後班-->
+                        <div id="afternoon" class="area">
+                            <table class="tbl-r02">
+                                <tr>
+                                  <th>集合時間(池袋公園)</th>
+                                  <td>9:20〜9:40 (開始前)</td>
+                                  <td>16:00〜16:20 (解散前)</td>
+                                </tr>
+                                  <th>サンシャイン水族館</th>
+                                  <td>14:00〜16:00</td>
+                                </tr>
+                                <tr>
+                                    <th>脱出ゲーム</th>
+                                    <td>13:00〜14:00</td>
+                                    <td>14:00〜15:00</td>
+                                    <td>15:00〜16:00</td>
+                                  </tr>
+                                  <tr class="last">
+                              </table>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!--フッター欄-->
+            <footer id="control2">
+
+                <ul class="modal-link">
+                    <li><a href="#modal-content-map" class="content">&#xf5a0</a></li><div class="pc-text">マップ</div>
+                    <li><a href="#modal-content-address" class="content">&#xf095</a></li><div class="pc-text">連絡先</div>
+                    <li><a href="#modal-content-schedule" class="content">&#xf017</a></li><div class="pc-text">スケジュール</div>
+                </ul>
+            </footer>
+        </div>
+
+        <!--jsのやつ-->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"></script>
+        <script src="script.js"></script>
+        <script src="placeholder.js"></script>
+        <script>
+            /*
+            highlight v5
+            Highlights arbitrary terms.
+            <https://johannburkard.de/blog/programming/javascript/highlight-javascript-text-higlighting-jquery-plugin.html>
+            MIT license.
+            Johann Burkard
+            <https://johannburkard.de>
+            <mailto:jb@eaio.com>
+            */
+            jQuery.fn.highlight = function(pat) {
+            function innerHighlight(node, pat) {
+            var skip = 0;
+            if (node.nodeType == 3) {
+            var pos = node.data.toUpperCase().indexOf(pat);
+            pos -= (node.data.substr(0, pos).toUpperCase().length - node.data.substr(0, pos).length);
+            if (pos >= 0) {
+            var spannode = document.createElement('span');
+            spannode.className = 'highlight';
+            var middlebit = node.splitText(pos);
+            var endbit = middlebit.splitText(pat.length);
+            var middleclone = middlebit.cloneNode(true);
+            spannode.appendChild(middleclone);
+            middlebit.parentNode.replaceChild(spannode, middlebit);
+            skip = 1;
+            }
+            }
+            else if (node.nodeType == 1 && node.childNodes && !/(script|style)/i.test(node.tagName)) {
+            for (var i = 0; i < node.childNodes.length; ++i) {
+            i += innerHighlight(node.childNodes[i], pat);
+            }
+            }
+            return skip;
+            }
+            return this.length && pat && pat.length ? this.each(function() {
+            innerHighlight(this, pat.toUpperCase());
+            }) : this;
+            };
+            jQuery.fn.removeHighlight = function() {
+            return this.find("span.highlight").each(function() {
+            this.parentNode.firstChild.nodeName;
+            with (this.parentNode) {
+            replaceChild(this.firstChild, this);
+            normalize();
+            }
+            }).end();
+            };
+            </script>
+            <!-- Highlight & 最初の文字へスクロール -->
+            <script>
+            function doHighlight() {
+            var word = $("#word").val()
+            .replace(/^\s+|\s+$/g, "")
+            .replace(/\s+/g, " ")
+            .split(" ");
+            for (i in word) {
+            if (word[i] != "") {
+            $("#target").removeHighlight();
+            $("#target").highlight(word[i]);
+            var ypos = $(".highlight").offset().top;
+            window.scrollTo({
+            left: 0,
+            top: ypos-300,
+            behavior: "smooth"
+            });
+            }
+            }
+            }
+            </script>
+    </body>
+</html>

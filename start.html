@@ -7,16 +7,16 @@
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.min.css">
         <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap">
-        <link rel="stylesheet" href="/Users/wakamiya626/Downloads/校外学習/style.css">
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
-        <a class="pagetop" href="#"><div class="pagetop__arrow"></div></a>
+        <a class="pagetop" href="index.html"><div class="pagetop__arrow"></div></a>
         <div class="wrapper">
             <!--ヘッダー欄-->
             <header id="control1">
                 <div class="homeclick">
-                    <a type="button"onclick="location.href='test.html'">2022年度校外学習サイト</a>
+                    <a type="button"onclick="location.href='index.html'">2022年度校外学習サイト</a>
                 </div>
             </header>
 
@@ -93,60 +93,73 @@
                         <h2>非常時の連絡先</h2>
                         <p>緊急で電話が必要な場合は下記の番号にご連絡ください。<br><a href="tel:07010475000">070-1047-5000</a></p>
                     </div>
-                    <!--スケジュールのページ-->
-                    <div id="modal-content-schedule" class="modal-content">
-                        <h2>スケジュール</h2>
-                        <ul class="tab">
-                            <li><a href="#morning">午前班</a></li>
-                            <li><a href="#afternoon">午後班</a></li>
-                        </ul>
-                        <!--午前班-->
-                        <div id="morning" class="area">
+                   <!--スケジュールのページ-->
+                   <div id="modal-content-schedule" class="modal-content">
+                    <h2>スケジュール</h2>
+                    <ul class="tab">
+                        <li><a href="#morning">午前班</a></li>
+                        <li><a href="#afternoon">午後班</a></li>
+                    </ul>
+                    <!--午前班-->
+                    <div id="morning" class="area">
 
-                            <table class="tbl-r02">
-                                <tr>
-                                  <th>見出し01(th)</th>
-                                  <td>内容（コンテンツ）</td>
-                                  <td>内容（コンテンツ）</td>
-                                  <td>内容（コンテンツ）</td>
-                                </tr>
-                                <tr>
-                                  <th>見出し01(th)</th>
-                                  <td>内容（コンテンツ）</td>
-                                  <td>内容（コンテンツ）</td>
-                                  <td>内容（コンテンツ）</td>
-                                </tr>
-                                <tr class="last">
-                                  <th>見出し01(th)</th>
-                                  <td>内容（コンテンツ）</td>
-                                  <td>内容（コンテンツ）</td>
-                                  <td>内容（コンテンツ）</td>
-                                </tr>
-                              </table>
-                               
-                            
-                        </div>
-                        <!--午後班-->
-                        <div id="afternoon" class="area">
-                            <p>午後班ページ</p>
-                        </div>
+                        <table class="tbl-r02">
+                            <tr>
+                              <th>集合時間(池袋公園)</th>
+                              <td>9:20〜9:40 (開始前)</td>
+                              <td>16:00〜16:20 (解散前)</td>
+                            </tr>
+                            <tr>
+                              <th>脱出ゲーム</th>
+                              <td>10:00〜11:00</td>
+                              <td>11:00〜12:00</td>
+                              <td>12:00〜13:00</td>
+                            </tr>
+                              <th>サンシャイン水族館</th>
+                              <td>14:00〜16:00</td>
+                            </tr>
+                            <tr class="last">
+                          </table>
+                           
+                        
+                    </div>
+                    <!--午後班-->
+                    <div id="afternoon" class="area">
+                        <table class="tbl-r02">
+                            <tr>
+                              <th>集合時間(池袋公園)</th>
+                              <td>9:20〜9:40 (開始前)</td>
+                              <td>16:00〜16:20 (解散前)</td>
+                            </tr>
+                              <th>サンシャイン水族館</th>
+                              <td>14:00〜16:00</td>
+                            </tr>
+                            <tr>
+                                <th>脱出ゲーム</th>
+                                <td>13:00〜14:00</td>
+                                <td>14:00〜15:00</td>
+                                <td>15:00〜16:00</td>
+                              </tr>
+                              <tr class="last">
+                          </table>
                     </div>
                 </div>
-            </main>
+            </div>
+        </main>
 
-            <!--フッター欄-->
-            <footer id="control2">
+        <!--フッター欄-->
+        <footer id="control2">
 
-                <ul class="modal-link">
-                    <li><a href="#modal-content-map" class="content">&#xf5a0</a></li><div class="pc-text">マップ</div>
-                    <li><a href="#modal-content-address" class="content">&#xf095</a></li><div class="pc-text">連絡先</div>
-                    <li><a href="#modal-content-schedule" class="content">&#xf017</a></li><div class="pc-text">スケジュール</div>
-                </ul>
-            </footer>
-        </div>
+            <ul class="modal-link">
+                <li><a href="#modal-content-map" class="content">&#xf5a0</a></li><div class="pc-text">マップ</div>
+                <li><a href="#modal-content-address" class="content">&#xf095</a></li><div class="pc-text">連絡先</div>
+                <li><a href="#modal-content-schedule" class="content">&#xf017</a></li><div class="pc-text">スケジュール</div>
+            </ul>
+        </footer>
+    </div>
 
-        <!--jsのやつ-->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"></script>
-        <script src="/Users/wakamiya626/Downloads/校外学習/script.js"></script></body>
+    <!--jsのやつ-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"></script>
+    <script src="script.js"></script></body>
 </html>

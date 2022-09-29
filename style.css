@@ -1,8 +1,25 @@
- 
-                    /*全体*/
-                a:link, a:visited, a:hover, a:active {
-                    color: rgb(0, 0, 0);
+
+                ul a:link, a:visited, a:hover, a:active {
+                    color: #00A4AC;
                 }
+
+            .li2{
+                text-decoration: none;
+                width: 100%;
+                margin: 10px auto;
+                 max-width: 600px;
+                padding: 0.5rem;
+              background: #ddffff;
+              border-left: none;
+              color: #004c50;
+             box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.22);
+             font-size: 20px;
+            }
+
+.highlight{
+font-weight:bold;
+background-color:#ddffff;
+}
 
             body {
                 margin: 0;
@@ -23,6 +40,10 @@
                     max-width: 70%;
                     margin: 5% auto 10%;
             }
+            .content-wrapper2 {
+                max-width: 100%;
+                margin: 5% auto 10%;
+        }
 
             .pagetop {
                 height: 50px;
@@ -182,8 +203,17 @@
               border: solid 1px #ccc;
                 padding: 10px;
               }
+.coltd{
+    background-color: #DDFFFF;
+}
+
                
               @media screen and (max-width: 640px) {
+
+                .content-wrapper2 {
+                    max-width: 70%;
+                    margin: 10% auto 10%;
+            }
 
                 .hand{
                     font-size: 12px;   
