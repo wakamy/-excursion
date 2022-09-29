@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.min.css">
+        <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <a class="pagetop" href="index.html"><div class="pagetop__arrow"></div></a>
+        <div class="wrapper">
+            <!--ヘッダー欄-->
+            <header id="control1">
+                <div class="homeclick">
+                    <div class="text">
+                        <a type="button"onclick="location.href='index.html'">
+                          <span class="word wisteria">2022年 校外学習サイト</span>
+                          <span class="word belize">2022年 校外学習サイト</span>
+                          <span class="word pomegranate">2022年 校外学習サイト</span>
+                          <span class="word green">2022年 校外学習サイト</span></a>
+                      </div>
+                </div>
+            </header>
+
+            <!--メイン欄-->
+            <main>
+                <form name="highlight">
+                    <input type="text" id="word" placeholder="ページ内検索" /> <input type="button" onclick="doHighlight()" value="検索" /> <input type="reset" name="reset" id="reset" value="初期化"> 
+                    </form>
+                    <!-- ハイライトのターゲットとする範囲 - 開始 -->
+                    <div id="target">
+                <div class="content-wrapper">
+                    <h2>地域のフードマップ</h2>
+                    <iframe src="https://www.google.com/maps/d/embed?mid=1c9JkwlYOIxPtFFHo-flDrnL34pD0OkU&ehbc=2E312F" width="100%" height="580" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    
+
+
+                        <table class="tbl-r02">
+                            <tr><th>店名</th>	<td>種類</td>	<td>値段</td>	<td>住所</td>	</tr>
+                            <tr><th>TOMBOYカフェ</th>	<td>インド料理</td>	<td>3980円〜</td>	<td>〒171-0022 東京都豊島区南池袋３丁目１３−１７ IKEBUKURO MASHITA5 2F</td>	</tr>
+                            <tr><th>ガスト 南池袋店</th>	<td>ファーストフード</td>	<td>低価格</td>	<td>〒171-0022 東京都豊島区南池袋２丁目２４−５</td>	</tr>
+                            <tr><th>無敵家</th>	<td>ラーメン</td>	<td>1000円程度</td>	<td>〒171-0022 東京都豊島区南池袋１丁目１７−１ 崎本ビル1F</td>	</tr>
+                            <tr><th>一蘭 池袋店</th>	<td>ラーメン</td>	<td>1000円程度</td>	<td>〒170-0013 東京都豊島区東池袋１丁目３９−１１</td>	</tr>
+                            <tr><th>つけ麺屋やすべえ 池袋店</th>	<td>ラーメン</td>	<td>1000円程度</td>	<td>〒170-0013 東京都豊島区東池袋１丁目１２−１４</td>	</tr>
+                            <tr><th>すしざんまい 池袋東口店</th>	<td>寿司</td>	<td>1000円程度</td>	<td>〒171-0022 東京都豊島区南池袋１丁目２７−８</td>	</tr>
+                            <tr><th>マクドナルド 池袋東口店</th>	<td>ファーストフード</td>	<td>1000円程度</td>	<td>〒171-0022 東京都豊島区南池袋１丁目２７−８</td>	</tr>
+                            <tr><th>スイーツパラダイス 池袋店</th>	<td>レストラン</td>	<td>1390円から</td>	<td>〒170-0013 東京都豊島区東池袋１丁目１−２ 高村ビル 5Ｆ</td>	</tr>
+                            <tr><th>ジョナサン 池袋サンシャイン前店</th>	<td>ファミリー レストラン</td>	<td>2500円から</td>	<td>タイムズステーション池袋, ２Ｆ, ４丁目-２５-９ 東池袋 豊島区 東京都 170-0013</td>	</tr>
+                            <tr><th>サイゼリヤ 池袋60階通り2号店</th>	<td>ファミリー レストラン</td>	<td>2000円から</td>	<td>〒170-0013 東京都豊島区東池袋１丁目１４−１ 池袋ｽｸｴｱ B2F</td>	</tr>
+                            <tr><th>モスバーガー 池袋東店</th>	<td>ハンバーガー</td>	<td>1000円から</td>	<td>〒170-0013 東京都豊島区東池袋１丁目３２−５</td>	</tr>
+                            <tr><th>がってん寿司 池袋サンシャイン60通り店</th>	<td>回転寿司</td>	<td>4000円から</td>	<td>〒170-0013 東京都豊島区東池袋１丁目１４−１ 池袋スクエア 地下 ２階</td>	</tr>
+                            <tr><th>スシロー 池袋駅東口店</th>	<td>回転寿司</td>	<td>3000円から</td>	<td>〒170-0013 東京都豊島区東池袋１丁目４１−４ 池袋とうきゅうビル ３F</td>	</tr>
+                            <tr><th>牛角 池袋サンシャイン通り店</th>	<td>焼肉店</td>	<td>2000円から</td>	<td>〒170-0013 東京都豊島区東池袋１丁目２１−１３ Aune池袋 ６Ｆ</td>	</tr>
+                            <tr><th>幸せのパンケーキ 池袋店</th>	<td>パンケーキ</td>	<td>2000円から</td>	<td>〒170-0013 東京都豊島区東池袋１丁目２−４ TⅡビル B1F</td>	</tr>
+                            <tr><th>マクドナルド サンシャインシティＡＬＴＡ店</th>	<td>ファーストフード店</td>	<td>600円から</td>	<td>〒170-0013 東京都豊島区東池袋３丁目１−３ サンシャイン・シテイ・アルタ B1</td>	</tr>
+                            <tr><th>ロッテリア 池袋東口店</th>	<td>ファーストフード店</td>	<td>1000円から</td>	<td>〒170-0013 東京都豊島区東池袋３丁目１−３ サンシャイン・シテイ・アルタ B1</td>	</tr>
+                            <tr><th>すき家 池袋サンシャイン前店</th>	<td>牛丼屋</td>	<td>1000円から</td>	<td>〒170-0013 東京都豊島区東池袋４丁目２５−９ タイムズステーション池袋</td>	</tr>
+                            <tr><th>麺処 花田 池袋店</th>	<td>ラーメン屋</td>	<td>1000円程度</td>	<td>〒170-0013 東京都豊島区東池袋１丁目２３−８ 東池袋ＩＳＫビル １</td>	</tr>
+                            <tr><th>ラーメン二郎 池袋東口店</th>	<td>ラーメン屋</td>	<td>1000円程度</td>	<td>〒171-0022 東京都豊島区南池袋２丁目２７−１７</td>	</tr>
+                            <tr><th>屯ちん 池袋本店</th>	<td>ラーメン屋</td>	<td>1000円程度</td>	<td>〒171-0022 東京都豊島区南池袋２丁目２６−２ ルート南池袋ビル 1F</td>	</tr>
+                            <tr><th>つけ麺屋やすべえ 池袋店</th>	<td>ラーメン屋</td>	<td>1000円程度</td>	<td>〒170-0013 東京都豊島区東池袋１丁目１２−１４</td>	</tr>
+                            <tr><th>ぶたいち・北海道番屋 池袋店</th>	<td>ラーメン屋</td>	<td>1000円程度</td>	<td>〒170-0013 東京都豊島区東池袋３丁目１ サンシャインシティ 専門店街アルパ 3F</td>	</tr>
+                            <tr><th>金のイタリアン</th>	<td>イタリア料理</td>	<td>3000円程度</td>	<td>〒170-0013 東京都豊島区東池袋１丁目１５−５ 東洋興業第2ビル 1F</td>	</tr>
+                            <tr><th>丸亀製麺サンシャインシティアルタ</th>	<td>うどん</td>	<td>1000円程度</td>	<td>〒170-0013 東京都豊島区東池袋３丁目１−３ サンシャインシティアルタ B1F</td>	</tr>
+                            <tr><th>しゃぶ菜 ヤマダ電機LABI1 日本総本店 池袋</th>	<td>しゃぶしゃぶレストラン</td>	<td>2000円から</td>	<td>〒170-0013 東京都豊島区東池袋１丁目５−７ ヤマダ電機LABI1 日本総本店 池袋 7F</td>	</tr>
+                            <tr><th>雛鮨 LABI1LIFESELECT池袋</th>	<td>寿司</td>	<td>4000円から</td>	<td>〒170-0013 東京都豊島区東池袋１丁目５−７ ヤマダデンキLABI1日本総本店 7F</td>	</tr>
+                            <tr><th>幸ちゃん寿司</th>	<td>寿司</td>	<td>6000円から</td>	<td>〒170-0013 東京都豊島区東池袋１丁目２３−８</td>	</tr>
+                            <tr><th>鮨処 銀座福助 サンシャイン60店</th>	<td>寿司</td>	<td>6000円から</td>	<td>〒170-0013 東京都豊島区東池袋３丁目１ サンシャイン60 59階</td>	</tr>
+                            <tr><th>吉野家 南池袋店</th>	<td>牛丼</td>	<td>1000円から</td>	<td>〒171-0022 東京都豊島区南池袋２丁目２６−４</td>	</tr>
+                            <tr><th>スターバックス コーヒー 池袋サンシャインシティ アルパ店</th>	<td>ーヒーショップ・喫茶店</td>	<td>700円から</td>	<td>〒170-6090 東京都豊島区東池袋３丁目１−１ サンシャインシティ アルパ ２F</td>	</tr>
+                            <tr><th>スターバックス コーヒー 池袋ショッピングパーク北館店</th>	<td>喫茶店</td>	<td>700円から</td>	<td>〒171-8532 東京都豊島区南池袋１丁目２９−１ 池袋ショッピングパーク</td>	</tr>
+                            <tr><th>ミスタードーナツ 池袋サンシャイン通りショップ</th>	<td>ドーナツ</td>	<td>1000円から</td>	<td>〒170-0013 東京都豊島区東池袋１丁目１５−３</td>	</tr>
+                            <tr><th>アトリエ ドゥ ゴディバ 西武池袋本店</th>	<td>喫茶店</td>	<td>1000円から</td>	<td>〒171-8569 東京都豊島区南池袋１丁目２８−１</td>	</tr>
+                            <tr><th>焼肉はん</th>	<td>焼肉</td>	<td>4000円から</td>	<td>〒171-0022 東京都豊島区南池袋１丁目２２−１ ロッテリア池袋西武前店</td>	</tr>
+                            <tr><th>焼肉スタジアム JAN池袋東口店</th>	<td>焼肉</td>	<td>4000円から</td>	<td>〒170-0013 東京都豊島区東池袋１丁目２８−４ 近代グループBld.1</td>	</tr>
+                            <tr><th>デニーズ 池袋駅前店</th>	<td>ファミリー レストラン</td>	<td>2000円から</td>	<td>〒170-0013 東京都豊島区東池袋１丁目１−２ 第三高村ビル ３Ｆ</td>	</tr>
+                            <tr><th>びっくりドンキー池袋サンシャイン通り店</th>	<td>ファミリー レストラン</td>	<td>2000円から</td>	<td> 〒170-0013 東京都豊島区東池袋１丁目２１−１１ オーク池袋ビル</td>	</tr>
+                            <tr class="last">
+                          </table>
+                        </div>
+                        <!-- ハイライトのターゲットとする範囲 - 終了 -->
+
+
+                </div>
+                <div id="modal">
+                    <!--マップのページ-->
+                    <div id="modal-content-map" class="modal-content">
+                        <section>
+                            <h2 class="title">マップ一覧</h2>
+                            <div class="box">
+                                <ul class="tab">
+                                    <li><a href="#station">集合場所</a></li>
+                                    <li><a href="#aquarium">サンシャイン水族館</a></li>
+                                    <li><a href="#escape">リアル脱出ゲーム本館</a></li>
+                                    <li><a href="#escape2">リアル脱出ゲーム別館</a></li>
+                                </ul>
+                            </div>
+                          </section>
+                        <!--渋谷駅のマップ-->
+                        <div id="station" class="area">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2166.7376887446494!2d139.7132239698836!3d35.727542410843334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d68f6cfe057%3A0xddd17dcd7ecaf745!2z6LGK5bO25Yy656uL5Y2X5rGg6KKL5YWs5ZyS!5e0!3m2!1sja!2sjp!4v1664461187324!5m2!1sja!2sjp" width="100%" height="580" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <!--サンシャイン水族館のマップ-->
+                        <div id="aquarium" class="area">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.8897557410955!2d139.71796861528858!3d35.72892973496187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d6f41f03f85%3A0xe25bfe624782e3c9!2z44K144Oz44K344Oj44Kk44Oz5rC05peP6aSo!5e0!3m2!1sja!2sjp!4v1664461542861!5m2!1sja!2sjp" width="100%" height="580" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <!--リアル脱出ゲームのマップ-->
+                        <div id="escape" class="area">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1772.2337538411816!2d139.7114215503049!3d35.7250914686104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d698263ffff%3A0xbd59a81d7022de2d!2z57W25a--56m66ZaT44Oq44Ki44Or5a-G5a6k6ISx5Ye644Ky44O844Og!5e0!3m2!1sja!2sjp!4v1664461599626!5m2!1sja!2sjp" width="100%" height="580" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <!--リアル脱出ゲーム別館のマップ-->
+                        <div id="escape2" class="area">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d202.43771327816563!2d139.7153208!3d35.7261346!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d6969f11195%3A0x310ce03bbe367524!2z44CSMTcxLTAwMjIg5p2x5Lqs6YO96LGK5bO25Yy65Y2X5rGg6KKL77yS5LiB55uu77yT77yT4oiS77yWIOWkp-WQjOODk-ODqw!5e0!3m2!1sja!2sjp!4v1664463071880!5m2!1sja!2sjp" width="100%" height="580" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <!--連絡先のページ-->
+                    <div id="modal-content-address" class="modal-content">
+                        <h2>緊急連絡方法</h2>
+                        <p>当日Slackで立てられるスレッドの方にご連絡ください</p>
+                        <h2>非常時の連絡先</h2>
+                        <p>緊急で電話が必要な場合は下記の番号にご連絡ください。<br><a href="tel:07010475000">070-1047-5000</a></p>
+                    </div>
+                    <!--スケジュールのページ-->
+                    <div id="modal-content-schedule" class="modal-content">
+                        <h2>スケジュール</h2>
+                        <ul class="tab">
+                            <li><a href="#morning">午前班</a></li>
+                            <li><a href="#afternoon">午後班</a></li>
+                        </ul>
+                        <!--午前班-->
+                        <div id="morning" class="area">
+
+                            <table class="tbl-r02">
+                                <tr>
+                                  <th>集合時間(池袋公園)</th>
+                                  <td>9:20〜9:40 (開始前)</td>
+                                  <td>16:00〜16:20 (解散前)</td>
+                                </tr>
+                                <tr>
+                                  <th>脱出ゲーム</th>
+                                  <td>10:00〜11:00</td>
+                                  <td>11:00〜12:00</td>
+                                  <td>12:00〜13:00</td>
+                                </tr>
+                                  <th>サンシャイン水族館</th>
+                                  <td>14:00〜16:00</td>
+                                </tr>
+                                <tr class="last">
+                              </table>
+                               
+                            
+                            </div>
+                            <!--午後班-->
+                            <div id="afternoon" class="area">
+                                <table class="tbl-r02">
+                                    <tr>
+                                      <th>集合時間(池袋公園)</th>
+                                      <td>9:20〜9:40 (開始前)</td>
+                                      <td>16:00〜16:20 (解散前)</td>
+                                    </tr>
+                                      <th>サンシャイン水族館</th>
+                                      <td>14:00〜16:00</td>
+                                    </tr>
+                                    <tr>
+                                        <th>脱出ゲーム</th>
+                                        <td>13:00〜14:00</td>
+                                        <td>14:00〜15:00</td>
+                                        <td>15:00〜16:00</td>
+                                      </tr>
+                                      <tr class="last">
+                                  </table>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+    
+                <!--フッター欄-->
+                <footer id="control2">
+    
+                    <ul class="modal-link">
+                        <li><a href="#modal-content-map" class="content">&#xf5a0</a></li><div class="pc-text">マップ</div>
+                        <li><a href="#modal-content-address" class="content">&#xf095</a></li><div class="pc-text">連絡先</div>
+                        <li><a href="#modal-content-schedule" class="content">&#xf017</a></li><div class="pc-text">スケジュール</div>
+                    </ul>
+                </footer>
+            </div>
+    
+            <!--jsのやつ-->
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"></script>
+            <script src="script.js"></script>
+            <script src="placeholder.js"></script>
+            <script>
+                /*
+                highlight v5
+                Highlights arbitrary terms.
+                <https://johannburkard.de/blog/programming/javascript/highlight-javascript-text-higlighting-jquery-plugin.html>
+                MIT license.
+                Johann Burkard
+                <https://johannburkard.de>
+                <mailto:jb@eaio.com>
+                */
+                jQuery.fn.highlight = function(pat) {
+                function innerHighlight(node, pat) {
+                var skip = 0;
+                if (node.nodeType == 3) {
+                var pos = node.data.toUpperCase().indexOf(pat);
+                pos -= (node.data.substr(0, pos).toUpperCase().length - node.data.substr(0, pos).length);
+                if (pos >= 0) {
+                var spannode = document.createElement('span');
+                spannode.className = 'highlight';
+                var middlebit = node.splitText(pos);
+                var endbit = middlebit.splitText(pat.length);
+                var middleclone = middlebit.cloneNode(true);
+                spannode.appendChild(middleclone);
+                middlebit.parentNode.replaceChild(spannode, middlebit);
+                skip = 1;
+                }
+                }
+                else if (node.nodeType == 1 && node.childNodes && !/(script|style)/i.test(node.tagName)) {
+                for (var i = 0; i < node.childNodes.length; ++i) {
+                i += innerHighlight(node.childNodes[i], pat);
+                }
+                }
+                return skip;
+                }
+                return this.length && pat && pat.length ? this.each(function() {
+                innerHighlight(this, pat.toUpperCase());
+                }) : this;
+                };
+                jQuery.fn.removeHighlight = function() {
+                return this.find("span.highlight").each(function() {
+                this.parentNode.firstChild.nodeName;
+                with (this.parentNode) {
+                replaceChild(this.firstChild, this);
+                normalize();
+                }
+                }).end();
+                };
+                </script>
+                <!-- Highlight & 最初の文字へスクロール -->
+                <script>
+                function doHighlight() {
+                var word = $("#word").val()
+                .replace(/^\s+|\s+$/g, "")
+                .replace(/\s+/g, " ")
+                .split(" ");
+                for (i in word) {
+                if (word[i] != "") {
+                $("#target").removeHighlight();
+                $("#target").highlight(word[i]);
+                var ypos = $(".highlight").offset().top;
+                window.scrollTo({
+                left: 0,
+                top: ypos-300,
+                behavior: "smooth"
+                });
+                }
+                }
+                }
+                </script>
+        </body>
+    </html>

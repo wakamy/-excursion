@@ -1,6 +1,11 @@
 
                 ul a:link, a:visited, a:hover, a:active {
                     color: #00A4AC;
+                    text-decoration: none;
+                }
+
+                td{
+                    background-color: #fff;
                 }
 
             .li2{
@@ -16,6 +21,11 @@
              font-size: 20px;
             }
 
+            input {
+                font-size: 18px;
+                margin: 30px 0 0;
+                }
+
 .highlight{
 font-weight:bold;
 background-color:#ddffff;
@@ -24,7 +34,7 @@ background-color:#ddffff;
             body {
                 margin: 0;
                 padding: 0;
-                background-color: #fff;
+                background: linear-gradient(-90deg, #ffeafd, rgb(228, 255, 255)) fixed;
             }
             .wrapper {
                 margin: 0;
@@ -38,7 +48,7 @@ background-color:#ddffff;
 
             .content-wrapper {
                     max-width: 70%;
-                    margin: 5% auto 10%;
+                    margin: 5% auto 200px;
             }
             .content-wrapper2 {
                 max-width: 100%;
@@ -69,9 +79,65 @@ background-color:#ddffff;
             }
 
             /*ヘッダー*/
+
+            @import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
+
+
+.word {
+    justify-content: center;
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  display: flex;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+}
+
+.letter {
+  display: inline-block;
+  position: relative;
+  float: left;
+  transform: translateZ(25px);
+  transform-origin: 50% 50% 25px;
+}
+
+.letter.out {
+  transform: rotateX(90deg);
+  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.letter.behind {
+  transform: rotateX(-90deg);
+}
+
+.letter.in {
+  transform: rotateX(0deg);
+  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.wisteria {
+  color: #8e44ad;
+}
+
+.belize {
+  color: #2980b9;
+}
+
+.pomegranate {
+  color: #c0392b;
+}
+
+.green {
+  color: #16a085;
+}
+
+.midnight {
+  color: #2c3e50;
+}
             header#control1 {
                 width: 98%;
-                background-color: #DDFFFF;
+                background-color: #ffffff;
                 text-align: center;
                 align-items: center;
                 position: fixed;
@@ -126,7 +192,7 @@ background-color:#ddffff;
                 margin: 10px auto;
                  max-width: 500px;
                 padding: 0.5rem;
-              background: #DDFFFF;
+              background: #ffffff;
              border-left: solid 6px #00A4AC;
               color: #00A4AC;
              box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.22);
@@ -137,7 +203,7 @@ background-color:#ddffff;
                 width: 100%;
                 padding: 100px 0;
                 clip-path: polygon(0 calc(0% + 7vw), 100% 0, 100% calc(100% - 7vw), 0 100%);
-                background-color: #DDFFFF;
+                background-color: #ffffff;
             }
 
             .slant-bg p {
@@ -151,7 +217,7 @@ background-color:#ddffff;
                 display: inline-block;
                 transform: rotate(5deg);
                 margin: 20px 0;
-                border: 10px solid #fff;
+                border: 10px solid rgb(220, 255, 247);
             }
             .photo2{
                 max-width: 400px;
@@ -159,7 +225,7 @@ background-color:#ddffff;
                 display: inline-block;
                 transform: rotate(-5deg);
                 margin: 20px 0;
-                border: 10px solid #fff;
+                border: 10px solid rgb(220, 255, 247);
             }
 
             /*フッター*/
@@ -225,7 +291,7 @@ background-color:#ddffff;
                     width: 100%;
                     padding: 30px 0;
                     clip-path: polygon(0 calc(0% + 7vw), 100% 0, 100% calc(100% - 7vw), 0 100%);
-                    background-color: #DDFFFF;
+                    background-color: #ffffff;
                 }
 
                 .content-wrapper {
