@@ -85,7 +85,7 @@
             }
 
             .hand{
-                font-size: 12px;   
+                font-size: 20px;   
                 font-family: 'yomogi', cursive;
                 color: black;
 
@@ -184,6 +184,11 @@
               }
                
               @media screen and (max-width: 640px) {
+
+                .hand{
+                    font-size: 12px;   
+    
+                }
 
                 .slant-bg {
                     margin: 0 0 50px;
