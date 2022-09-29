@@ -114,7 +114,7 @@
             .slant-bg {
                 margin: 0 0 50px;
                 width: 100%;
-                padding: 30px 0;
+                padding: 100px 0;
                 clip-path: polygon(0 calc(0% + 7vw), 100% 0, 100% calc(100% - 7vw), 0 100%);
                 background-color: #DDFFFF;
             }
@@ -184,6 +184,14 @@
               }
                
               @media screen and (max-width: 640px) {
+
+                .slant-bg {
+                    margin: 0 0 50px;
+                    width: 100%;
+                    padding: 30px 0;
+                    clip-path: polygon(0 calc(0% + 7vw), 100% 0, 100% calc(100% - 7vw), 0 100%);
+                    background-color: #DDFFFF;
+                }
 
                 .content-wrapper {
                     max-width: 70%;
