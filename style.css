@@ -1,5 +1,8 @@
  
- /*全体*/
+                    /*全体*/
+                a:link, a:visited, a:hover, a:active {
+                    color: rgb(0, 0, 0);
+                }
 
             body {
                 margin: 0;
@@ -14,6 +17,34 @@
                 height: auto;
                 position: relative;
                 text-align: center;
+            }
+
+            .content-wrapper {
+                    max-width: 70%;
+                    margin: 5% auto 10%;
+            }
+
+            .pagetop {
+                height: 50px;
+                width: 50px;
+                position: fixed;
+                right: 5px;
+                bottom: 5px;
+                background: #fff;
+                border: solid 2px #000;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 2;
+            }
+            
+            .pagetop__arrow {
+                height: 10px;
+                width: 10px;
+                border-top: 3px solid #000;
+                border-right: 3px solid #000;
+                transform: translateY(20%) rotate(-45deg);
             }
 
             /*ヘッダー*/
@@ -53,6 +84,12 @@
                 list-style: none;
             }
 
+            .hand{
+                font-size: 12px;   
+                font-family: 'yomogi', cursive;
+                color: black;
+
+            }
             main h2 {
                 padding:10px 0px;
                 margin:auto;
@@ -75,8 +112,9 @@
             }
 
             .slant-bg {
+                margin: 0 0 50px;
                 width: 100%;
-                padding: 150px 0;
+                padding: 30px 0;
                 clip-path: polygon(0 calc(0% + 7vw), 100% 0, 100% calc(100% - 7vw), 0 100%);
                 background-color: #DDFFFF;
             }
@@ -85,24 +123,91 @@
                 width: 65%;
                 margin: 0 auto;
             }  
+
+            .photo{
+                max-width: 400px;
+                width: 80%;
+                display: inline-block;
+                transform: rotate(5deg);
+                margin: 20px 0;
+                border: 10px solid #fff;
+            }
+            .photo2{
+                max-width: 400px;
+                width: 80%;
+                display: inline-block;
+                transform: rotate(-5deg);
+                margin: 20px 0;
+                border: 10px solid #fff;
+            }
+
             /*フッター*/
             footer#control2 {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 width: 98%;
+                height: 9%;
                 margin: 0;
                 background-color: #fff;
                 text-align: center;
                 position: fixed;
                 right: 1%;
                 left: 1%;
-                bottom: 5px;
-                border-radius: 5px;
+                bottom: 30px;
+                border-radius: 10px;
                 filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.4));
             }
             
             /*モーダル*/
+            h2{
+                    padding:10px 0px;
+                    margin:auto;
+                    font-size: 30px;
+                    list-style: none;
+                    font-family: 'yomogi', cursive;
+                    color: black;
+            }
+              table {
+                margin: 0 auto;
+              }
+
+              .tbl-r02 th {
+                background: #00A4AC;
+                border: solid 1px #ccc;
+                color: #fff;
+                padding: 10px;
+              }
+              .tbl-r02 td {
+              border: solid 1px #ccc;
+                padding: 10px;
+              }
+               
+              @media screen and (max-width: 640px) {
+
+                .content-wrapper {
+                    max-width: 70%;
+                    margin: 10% auto 50%;
+            }
+
+
+                .last td:last-child {
+                  border-bottom: solid 1px #ccc;
+                  width: 100%;
+                }
+                .tbl-r02 {
+                  width: 80%;
+                }
+                .tbl-r02 th,
+
+                .tbl-r02 td {
+              border-bottom: none;
+                  display: block;
+                  width: 100%;
+                }
+              }
+               
+
             #modal {
                 display: none;
                 text-align: center;
@@ -111,7 +216,6 @@
             }
 
             .content {
-               
                 height: 30%;
                 width: 30%;
             }
@@ -131,7 +235,7 @@
             }
 
             .modal-link li {
-                margin-bottom: 20px;
+                margin-bottom: 00px;
             }
 
             .modal-link li a {
@@ -169,21 +273,21 @@
 
             .tab li a {
                 padding: .5em 1em;
-                background: rgb(180, 180, 180);
+                background: rgb(255, 255, 255);
                 border-radius: 10px 50px/50px 10px;
                 border:ridge 2px #333;
                 font-size: 16px;
             }
 
             .tab li.active a {
-                background: #fff;
+                background: #DDFFFF;
             }
 
             .area {
                 display: none;
                 opacity: 0;
                 background: #fff;
-                padding: 50px 20px;
+                padding: 3px 3px;
             }
 
             .area.is-active {
@@ -218,3 +322,78 @@
                     width: 100%;
                 }
             }
+
+
+            /*==================================================
+アコーディオンのためのcss
+===================================*/
+
+/*アコーディオン全体*/
+.accordion-area{
+    list-style: none;
+    width: 96%;
+    max-width: 900px;
+    margin:0 auto;
+}
+
+.accordion-area li{
+    margin: 10px 0;
+}
+
+.accordion-area section {
+  border: 1px solid #ccc;
+}
+
+/*アコーディオンタイトル*/
+.title {
+margin: 0 auto;
+    font-size: 30px;
+     list-style: none;
+     font-family: 'yomogi', cursive;
+     color: black;
+    position: relative;/*+マークの位置基準とするためrelative指定*/
+    cursor: pointer;
+    font-weight: normal;
+    padding: 3% 3% 3% 50px;
+    transition: all .5s ease;
+}
+
+/*アイコンの＋と×*/
+.title::before,
+.title::after{
+    position: absolute;
+    content:'';
+    width: 15px;
+    height: 2px;
+    background-color: #333;
+    
+}
+.title::before{
+    top:48%;
+    left: 15px;
+    transform: rotate(0deg);
+    
+}
+.title::after{    
+    top:48%;
+    left: 15px;
+    transform: rotate(90deg);
+
+}
+/*　closeというクラスがついたら形状変化　*/
+.title.close::before{
+  transform: rotate(45deg);
+}
+
+.title.close::after{
+  transform: rotate(-45deg);
+}
+
+/*アコーディオンで現れるエリア*/
+.box {
+    display: none;/*はじめは非表示*/
+    border-radius: 10px 50px/50px 10px;
+    border: solid 2px #333;
+  margin:0 3% 3% 3%;
+    padding: 3%;
+}
