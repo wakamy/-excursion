@@ -248,6 +248,10 @@ background-color:#ddffff;
                 border-radius: 10px;
                 filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.4));
             }
+
+            footer#control2 li a {
+                width: 105px;
+            }
             
             /*モーダル*/
             h2{
